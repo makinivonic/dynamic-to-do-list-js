@@ -23,12 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Create a "Remove" button
         const removeButton = document.createElement('button');
         removeButton.textContent = 'Remove';
-        removeButton.className = 'remove-btn';
+        removeButton.classList.add('remove-btn'); // Add the 'remove-btn' class
 
         // Add an event listener to the "Remove" button
-        removeButton.addEventListener('click', () => {
+        removeButton.onclick = () => {
             taskList.removeChild(taskItem); // Remove the <li> from the <ul>
-        });
+        };
 
         // Append the "Remove" button to the <li>
         taskItem.appendChild(removeButton);
